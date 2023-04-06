@@ -1,5 +1,5 @@
 #include<iostream>
-#define MAX_SIZE 518020
+#define MAX_SIZE 518021
 
 using namespace std;
 

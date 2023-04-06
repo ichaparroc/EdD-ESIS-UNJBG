@@ -21,15 +21,7 @@ int main()
 	cout<<'\t'<<"*puntero: "<<*puntero<<'\n';
 	cout<<'\t'<<"&*puntero: "<<&*puntero<<'\n';
 	cout<<'\t'<<"&puntero: "<<&puntero<<'\n';
-	
-	*puntero = variable;
-	
-	cout<<'\n'<<"*puntero = variable"<<'\n';
-	cout<<'\t'<<"puntero: "<<puntero<<'\n';
-	cout<<'\t'<<"*puntero: "<<*puntero<<'\n';
-	cout<<'\t'<<"&*puntero: "<<&*puntero<<'\n';
-	cout<<'\t'<<"&puntero: "<<&puntero<<'\n';
-	
+		
 	*puntero = 4321;
 	
 	cout<<'\n'<<"*puntero = 4321"<<'\n';
