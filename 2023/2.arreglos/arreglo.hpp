@@ -11,7 +11,7 @@ class arreglo
 
         arreglo(int s)
         {
-            key=new int(s);
+            key=new int[s];
             this->max=s;
             this->size=0;
         }
