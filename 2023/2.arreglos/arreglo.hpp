@@ -59,7 +59,7 @@ void arreglo::buscar(int k)
 void arreglo::imprimir()
 {
     for(int i=0;i<this->size;i++)
-        cout<<this->key[i]<<endl;
+        cout<<this->key[i]<<" ";
 }
 
 
