@@ -15,7 +15,7 @@ class lista_simple
 		
 		lista_simple()
 		{
-			head = NULL;
+			this->head=NULL;
 		}
 		
 		void insertar_inicio(int k);
@@ -29,63 +29,61 @@ void lista_simple::insertar_inicio(int k)
 {
 	nodo *x = new nodo;
 	x->key = k;
-	x->next = this->head;
-	head = x;
+	x->next=this->head;
+	this->head=x;
 }
 
 void lista_simple::insertar_fin(int k)
 {
-	if(this->head == NULL)
+	if(this->head==NULL)
 	{
 		this->insertar_inicio(k);
 	}
 	else
 	{
-		nodo *x = this->head;
-		while(x->next != NULL)
+		nodo *x=this->head;
+		while(x->next!=NULL)
 		{
-			x = x->next;
+			x=x->next;
 		}
-		nodo *y = new nodo;
-		y->key = k;
-		y->next = x->next;
-		x->next = y;
+		nodo *y=new nodo;
+		y->key=k;
+		y->next=x->next;
+		x->next=y;
 	}
 }
 
 void lista_simple::imprimir()
 {
-	nodo *x = this->head;
-	int count = 0;
-	while(x != NULL)
+	nodo *x=this->head;
+	while(x!=NULL)
 	{
 		cout<<x->key<<' ';
-		x = x->next;
-		count++;
+		x=x->next;
 	}
 	cout<<endl;
 }
 
 void lista_simple::eliminar_key(int k)
 {
-	if(this->head != NULL)
+	if(this->head!=NULL)
 	{
-		nodo *x = this->head;
-		if(x->key == k)
+		nodo *x=this->head;
+		if(x->key==k)
 		{
-			this->head = this->head->next;
+			this->head=this->head->next;
 			delete x;
 		}
 		else
 		{
-			while(x->next != NULL and x->next->key != k)
+			while(x->next!=NULL and x->next->key!=k)
 			{
-				x = x->next;
+				x=x->next;
 			}
-			if(x->next != NULL)
+			if(x->next!=NULL)
 			{
-				nodo *y = x->next;
-				x->next = x->next->next;
+				nodo *y=x->next;
+				x->next=x->next->next;
 				delete y;
 			}
 		}
@@ -94,12 +92,12 @@ void lista_simple::eliminar_key(int k)
 
 int lista_simple::buscar_key(int k)
 {
-	nodo *x = this->head;
-	while(x != NULL and x->key != k)
+	nodo *x=this->head;
+	while(x!=NULL and x->key!=k)
 	{
-		x = x->next;
+		x=x->next;
 	}
-	if(x != NULL)
+	if(x!=NULL)
 	{
 		return 1;
 	}
